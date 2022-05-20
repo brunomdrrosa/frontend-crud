@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>Nova propriedade</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Inquilino"
+        [(ngModel)]="property.tenant"
+        name="tenant"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Endereço"
+        [(ngModel)]="property.address"
+        name="address"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Data"
+        [(ngModel)]="property.date"
+        name="date"
+      />
+    </mat-form-field>
+    
+  </form>
+
+  <button mat-raised-button (click)="createProperty()" color="primary">
+    Salvar
+  </button>
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
